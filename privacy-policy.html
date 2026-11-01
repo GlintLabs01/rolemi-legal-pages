@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — RoleMi AI</title>
+  <meta name="description" content="Official Privacy Policy for RoleMi AI mobile application and Cloudflare edge services. Learn how we protect, store, and process your conversational data and account privacy.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237C3AED' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z'/%3E%3Cpath d='M12 6a6 6 0 0 0-6 6c0 1.9 1 3.5 2.5 4.5l1.5-1.5'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --primary: #7C3AED;
+      --primary-dark: #6D28D9;
+      --primary-light: #F5F3FF;
+      --primary-ring: rgba(124, 58, 237, 0.15);
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-light: #64748B;
+      --bg-body: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --border-color: #E2E8F0;
+      --border-accent: #CBD5E1;
+      --success: #059669;
+      --success-bg: #ECFDF5;
+      --warning: #D97706;
+      --warning-bg: #FFFBEB;
+      --danger: #DC2626;
+      --danger-bg: #FEF2F2;
+      --info-bg: #EFF6FF;
+      --info-border: #93C5FD;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      color: var(--text-main);
+      background-color: var(--bg-body);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header Nav */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 8px rgba(124, 58, 237, 0.35);
+    }
+
+    .brand-name {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+      color: #0F172A;
+    }
+
+    .brand-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 0.2rem 0.5rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(124, 58, 237, 0.2);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.5rem 0.9rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      background: white;
+      color: var(--text-muted);
+      transition: all 0.15s ease;
+    }
+
+    .nav-link-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .nav-link-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .print-btn {
+      cursor: pointer;
+    }
+
+    /* Layout Wrapper */
+    .layout-wrapper {
+      max-width: 1200px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    /* Sidebar Table of Contents */
+    aside.toc-sidebar {
+      position: sticky;
+      top: 5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      max-height: calc(100vh - 6.5rem);
+      overflow-y: auto;
+    }
+
+    .toc-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-light);
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+    }
+
+    .toc-link {
+      display: block;
+      padding: 0.4rem 0.6rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      transition: all 0.15s ease;
+      line-height: 1.35;
+    }
+
+    .toc-link:hover {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 600;
+      padding-left: 0.85rem;
+    }
+
+    /* Main Content */
+    main.legal-document {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 3rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .doc-hero {
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .doc-hero h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #0F172A;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+    }
+
+    .meta-pill strong {
+      color: var(--text-main);
+    }
+
+    /* Typography & Sections */
+    section.legal-section {
+      margin-bottom: 3rem;
+      scroll-margin-top: 5rem;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #0F172A;
+      letter-spacing: -0.02em;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    h2 .sec-num {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 1.25rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1E293B;
+      margin-top: 1.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+      font-size: 0.96rem;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    ul, ol {
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    li strong {
+      color: var(--text-main);
+    }
+
+    /* Callout Boxes */
+    .callout {
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      border-left: 5px solid;
+    }
+
+    .callout-success {
+      background: var(--success-bg);
+      border-color: var(--success);
+      color: #064E3B;
+    }
+
+    .callout-warning {
+      background: var(--warning-bg);
+      border-color: var(--warning);
+      color: #78350F;
+    }
+
+    .callout-danger {
+      background: var(--danger-bg);
+      border-color: var(--danger);
+      color: #7F1D1D;
+    }
+
+    .callout-info {
+      background: var(--info-bg);
+      border-color: #3B82F6;
+      color: #1E3A8A;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .callout p {
+      color: inherit;
+      margin-bottom: 0.5rem;
+      font-size: 0.92rem;
+    }
+
+    .callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Data Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+
+    th {
+      background: #F1F5F9;
+      color: #0F172A;
+      font-weight: 700;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) td {
+      background: #F8FAFC;
+    }
+
+    /* Contact Card */
+    .contact-card {
+      background: linear-gradient(135deg, #FAF5FF 0%, #F5F3FF 100%);
+      border: 1px solid rgba(124, 58, 237, 0.2);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-card h4 {
+      color: var(--primary-dark);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+
+    .contact-item a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: #0F172A;
+      color: #94A3B8;
+      padding: 3rem 1.5rem;
+      font-size: 0.88rem;
+      border-top: 1px solid #1E293B;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      color: #CBD5E1;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 900px) {
+      .layout-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      aside.toc-sidebar {
+        display: none; /* Hide sticky sidebar on small screens */
+      }
+
+      main.legal-document {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .doc-hero h1 {
+        font-size: 1.75rem;
+      }
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      header.site-header, aside.toc-sidebar, footer.site-footer, .nav-actions {
+        display: none !important;
+      }
+
+      .layout-wrapper {
+        margin: 0;
+        padding: 0;
+        grid-template-columns: 1fr;
+      }
+
+      main.legal-document {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+
+      body {
+        background: white;
+        color: black;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">R</div>
+        <div>
+          <span class="brand-name">RoleMi</span>
+          <span class="brand-badge">Legal</span>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <a href="privacy-policy.html" class="nav-link-btn active">Privacy Policy</a>
+        <a href="terms-of-service.html" class="nav-link-btn">Terms of Service</a>
+        <button onclick="window.print()" class="nav-link-btn print-btn" title="Print or save as PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          Print
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="layout-wrapper">
+    
+    <!-- Table of Contents Sidebar -->
+    <aside class="toc-sidebar">
+      <div class="toc-title">
+        <span>Table of Contents</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+      </div>
+      <ul class="toc-list">
+        <li><a href="#sec-1" class="toc-link">1. Introduction & Overview</a></li>
+        <li><a href="#sec-2" class="toc-link">2. Information We Collect</a></li>
+        <li><a href="#sec-3" class="toc-link">3. AI Processing & Zero Training</a></li>
+        <li><a href="#sec-4" class="toc-link">4. Virtual Currency (Gems)</a></li>
+        <li><a href="#sec-5" class="toc-link">5. Third-Party Services & SDKs</a></li>
+        <li><a href="#sec-6" class="toc-link">6. Security & Encryption</a></li>
+        <li><a href="#sec-7" class="toc-link">7. Data Retention & Deletion</a></li>
+        <li><a href="#sec-8" class="toc-link">8. Children's Privacy (COPPA)</a></li>
+        <li><a href="#sec-9" class="toc-link">9. International Data Transfers</a></li>
+        <li><a href="#sec-10" class="toc-link">10. Your Rights (GDPR & CCPA)</a></li>
+        <li><a href="#sec-11" class="toc-link">11. Changes to This Policy</a></li>
+        <li><a href="#sec-12" class="toc-link">12. Contact & Data Officer</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Legal Document -->
+    <main class="legal-document">
+      
+      <div class="doc-hero">
+        <h1>Privacy Policy</h1>
+        <p style="font-size: 1.05rem; color: var(--text-main); font-weight: 500;">
+          Transparent data protection practices for the <strong>RoleMi</strong> mobile application, web application, and Cloudflare-powered backend services.
+        </p>
+        <div class="meta-pills">
+          <div class="meta-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span><strong>Effective Date:</strong> November 1, 2026</span>
+          </div>
+          <div class="meta-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span><strong>Application ID:</strong> com.aetheria.ai</span>
+          </div>
+          <div class="meta-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <span><strong>Zero Model Training:</strong> Guaranteed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="sec-1" class="legal-section">
+        <h2><span class="sec-num">1.</span> Introduction & Overview</h2>
+        <p>
+          Welcome to <strong>RoleMi</strong> (also referred to herein as "RoleMi AI", "the Application", "we", "us", or "our", operated by Aetheria AI / com.aetheria.ai). RoleMi is a next-generation interactive conversational AI roleplay application available on Android and modern web platforms.
+        </p>
+        <p>
+          This Privacy Policy explains in complete detail how we collect, store, utilize, disclose, and safeguard your personal information when you install, access, or interact with our mobile application, cloud infrastructure, and associated services.
+        </p>
+        <p>
+          We are committed to operating in full accordance with the highest international privacy and consumer data protection benchmarks, including the <strong>General Data Protection Regulation (GDPR)</strong>, the <strong>California Consumer Privacy Act (CCPA / CPRA)</strong>, the <strong>Children's Online Privacy Protection Act (COPPA)</strong>, and <strong>Google Play Developer Program Policies</strong>.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="sec-2" class="legal-section">
+        <h2><span class="sec-num">2.</span> Information We Collect</h2>
+        <p>
+          We practice data minimization: we collect only what is strictly required to provide real-time AI roleplay dialogues, store character memories across chat sessions, authenticate user accounts, and maintain our fair virtual currency system.
+        </p>
+
+        <h3>A. Information You Voluntarily Provide</h3>
+        <ul>
+          <li><strong>Authentication & Account Data:</strong> When signing in with Google OAuth 2.0 or Email One-Time Passcode (OTP), we collect your verified email address, Google User ID, display name, and avatar image URL. We do not store or collect passwords.</li>
+          <li><strong>AI Conversations & Prompts:</strong> All conversational messages, text responses, system instructions, and interactive narrative choices you submit to characters within chat sessions.</li>
+          <li><strong>User-Generated Characters:</strong> When using the Character Creator tool, we store custom character names, avatars, personal lore backstories, opening greetings, and conversational behavioral traits you configure.</li>
+          <li><strong>Safety & Moderation Flags:</strong> Details you provide when reporting an abusive message, inappropriate AI response, or policy violation, including selected category and context snippets.</li>
+        </ul>
+
+        <h3>B. Information Collected Automatically</h3>
+        <ul>
+          <li><strong>Virtual Currency & Transaction Ledger:</strong> Authoritative balance of virtual Gems (💎), itemized transaction history (daily check-ins, rewarded ad views, referrals, and consumable usage timestamps).</li>
+          <li><strong>Device & Network Diagnostics:</strong> Android OS version, device manufacturer/model, client app build number, network carrier status, and Cloudflare edge latency to detect anomalous brute-force traffic.</li>
+          <li><strong>App Preferences:</strong> Selected theme preferences, haptic vibration preferences, sound toggles, and audio playback settings stored locally on your device.</li>
+        </ul>
+
+        <div class="callout callout-success">
+          <div class="callout-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            What We Strictly DO NOT Collect
+          </div>
+          <p>
+            We <strong>never</strong> access your device contact list, address book, SMS messages, phone call history, exact GPS or background location, biometric data, or health records. We do not access camera or microphone hardware without real-time, explicit runtime permission from the user.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="sec-3" class="legal-section">
+        <h2><span class="sec-num">3.</span> AI Inference Processing & Zero Model Training Guarantee</h2>
+        <p>
+          RoleMi utilizes state-of-the-art Large Language Models (LLMs) to power fictional persona dialogue, unscripted storytelling, and relationship continuity.
+        </p>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            Strict Zero-Retention & Zero-Training Commitment
+          </div>
+          <p>
+            <strong>Under our enterprise API agreements with foundational model providers (including Google Gemini API and OpenAI API), your private conversations, roleplay scenarios, fictional prompts, and memory notes are NEVER used to train, retrain, improve, or fine-tune public or proprietary AI models.</strong>
+          </p>
+          <p>
+            Your prompts are processed purely ephemerally in transit for immediate real-time response generation and are not stored by AI providers for data mining or commercial model refinement.
+          </p>
+        </div>
+
+        <h3>Contextual Memory Synthesis</h3>
+        <p>
+          To prevent repetitive conversations, our edge infrastructure automatically extracts salient fictional facts (such as character nicknames, ongoing storyline events, and user preferences) and writes them to encrypted records linked to your user account. These memory records remain strictly private to your account.
+        </p>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="sec-4" class="legal-section">
+        <h2><span class="sec-num">4.</span> Virtual Currency (Gems 💎) & Billing Data</h2>
+        <p>
+          RoleMi features an in-app virtual currency denominated in <strong>Gems (💎)</strong>.
+        </p>
+        <ul>
+          <li><strong>No Payment Card Storage:</strong> All real-money transactions for virtual Gems packages are processed exclusively by <strong>Google Play In-App Billing</strong> (or authorized app stores). RoleMi never handles, collects, or stores your credit card numbers, debit cards, bank details, or billing addresses.</li>
+          <li><strong>Atomic Zero-Loss Safeguard:</strong> Our Cloudflare edge backend employs atomic transactions. If an AI conversation generation attempt encounters a network failure or edge timeout, reserved Gems are instantly rolled back to your balance at zero loss.</li>
+          <li><strong>No Real-World Cash Value:</strong> Virtual Gems are entertainment license tokens that cannot be traded, sold, or redeemed for fiat currency.</li>
+        </ul>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="sec-5" class="legal-section">
+        <h2><span class="sec-num">5.</span> Third-Party Service Providers & SDK Integrations</h2>
+        <p>
+          We partner with industry-leading cloud and infrastructure providers. Below is an itemized breakdown of third-party SDKs and services integrated into RoleMi:
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Provider / SDK</th>
+                <th>Purpose</th>
+                <th>Data Shared</th>
+                <th>Privacy Documentation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cloudflare, Inc.</strong></td>
+                <td>Global Edge Workers, D1 SQL Database, R2 Object Storage, DDoS Defense</td>
+                <td>Encrypted chat records, IP for abuse prevention, avatars</td>
+                <td><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy</a></td>
+              </tr>
+              <tr>
+                <td><strong>Google Identity (OAuth 2.0)</strong></td>
+                <td>User authentication and sign-in verification</td>
+                <td>Email, display name, Google ID token</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy</a></td>
+              </tr>
+              <tr>
+                <td><strong>Google Play In-App Billing</strong></td>
+                <td>In-app purchase validation for virtual Gems</td>
+                <td>Purchase tokens, product IDs, order timestamps</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Terms</a></td>
+              </tr>
+              <tr>
+                <td><strong>Google AdMob SDK</strong></td>
+                <td>Optional rewarded video advertisements for free Gems</td>
+                <td>Advertising ID (where permitted), device signals, SSV reward verification tokens</td>
+                <td><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob Policies</a></td>
+              </tr>
+              <tr>
+                <td><strong>Google Cloud / Gemini API</strong></td>
+                <td>Zero-retention AI conversational inference</td>
+                <td>Transient prompt texts under enterprise zero-data-retention terms</td>
+                <td><a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank" rel="noopener">Google Cloud AI Privacy</a></td>
+              </tr>
+              <tr>
+                <td><strong>OpenAI Enterprise API</strong></td>
+                <td>Zero-retention AI conversational inference</td>
+                <td>Transient prompt texts under zero-retention enterprise terms</td>
+                <td><a href="https://openai.com/enterprise-privacy" target="_blank" rel="noopener">OpenAI Privacy</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="sec-6" class="legal-section">
+        <h2><span class="sec-num">6.</span> Data Storage, Encryption, and Security Architecture</h2>
+        <p>
+          We employ multi-layered industry standards to ensure that your roleplay memories and sessions remain confidential and resilient:
+        </p>
+        <ul>
+          <li><strong>Encryption in Transit:</strong> 100% of network communications between the mobile application and our servers are encrypted using modern Transport Layer Security (TLS 1.3 / HTTPS).</li>
+          <li><strong>Encryption at Rest:</strong> Database records on Cloudflare D1 and multimedia assets on Cloudflare R2 are encrypted at rest using AES-256 standards.</li>
+          <li><strong>Cryptographic Sessions:</strong> Authentication tokens utilize HMAC-SHA256 signatures with automated session expiration. Client authentication tokens are stored using Android Keystore / Encrypted Preferences.</li>
+          <li><strong>Role-Based Access:</strong> Production database access is restricted strictly to automated worker logic with zero human inspection of confidential conversation logs.</li>
+        </ul>
+      </section>
+
+      <!-- Section 7 -->
+      <section id="sec-7" class="legal-section">
+        <h2><span class="sec-num">7.</span> Data Retention & Permanent Account Deletion Policy</h2>
+        <p>
+          In full compliance with Google Play's <em>User Data Policy and Account Deletion Requirement</em>, users possess complete autonomy over their data lifecycle.
+        </p>
+
+        <h3>How to Delete Your Account and Data</h3>
+        <p>You can request complete account deletion at any time through either of the following two pathways:</p>
+
+        <div class="callout callout-info">
+          <div class="callout-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Path 1: In-App Direct Account Deletion
+          </div>
+          <p>
+            Open the <strong>RoleMi</strong> app &rarr; Tap <strong>Profile</strong> &rarr; Tap the <strong>Settings (Gear)</strong> icon &rarr; Tap <strong>Account Delete</strong> &rarr; Confirm deletion.
+          </p>
+        </div>
+
+        <div class="callout callout-info">
+          <div class="callout-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            Path 2: Web-Based External Deletion Portal
+          </div>
+          <p>
+            If you have uninstalled the app or lost your mobile device, you can request immediate account and data deletion via our web endpoint:<br>
+            <a href="https://api.aetheria.ai/delete-account" target="_blank" rel="noopener" style="color: #2563EB; font-weight: 700; word-break: break-all;">https://api.aetheria.ai/delete-account</a>
+            or by emailing <a href="mailto:privacy@aetheria.ai?subject=Account%20Deletion%20Request">privacy@aetheria.ai</a>.
+          </p>
+        </div>
+
+        <h3>Deletion Scope & Timeline</h3>
+        <p>
+          Upon account deletion confirmation, all user profile identifiers, OAuth connections, conversation threads, contextual memory notes, custom characters, and generated avatar images are <strong>immediately purged from our live Cloudflare D1 databases and R2 buckets</strong>. Full replica propagation across edge caches completes within thirty (30) days. Itemized financial billing tokens are anonymized to fulfill statutory tax and audit regulations.
+        </p>
+      </section>
+
+      <!-- Section 8 -->
+      <section id="sec-8" class="legal-section">
+        <h2><span class="sec-num">8.</span> Children's Privacy (COPPA & Global Standards)</h2>
+        <p>
+          RoleMi is strictly intended for individuals who are at least <strong>13 years of age</strong> (or 16 years of age for residents of the European Economic Area / United Kingdom).
+        </p>
+        <p>
+          We do not knowingly collect, solicit, or maintain personally identifiable information from children under the age of 13. If we discover or receive credible notification that personal data of an individual under the statutory age has been collected, we will immediately deactivate the account and permanently delete all related records from our systems. Parents or guardians who believe their child has registered an account may contact us at <a href="mailto:privacy@aetheria.ai">privacy@aetheria.ai</a> for immediate expedited removal.
+        </p>
+      </section>
+
+      <!-- Section 9 -->
+      <section id="sec-9" class="legal-section">
+        <h2><span class="sec-num">9.</span> International Data Transfers</h2>
+        <p>
+          Our application backend operates across Cloudflare's globally distributed edge network and secure cloud facilities located worldwide. By accessing the Application, you acknowledge and consent that your information may be processed and stored in regions outside your state, province, or country of residence, where data privacy legislation may differ from your local jurisdiction. All cross-border data transfers are executed under recognized legal transfer mechanisms and Standard Contractual Clauses (SCCs).
+        </p>
+      </section>
+
+      <!-- Section 10 -->
+      <section id="sec-10" class="legal-section">
+        <h2><span class="sec-num">10.</span> Your Rights (GDPR, CCPA/CPRA, and Regional Laws)</h2>
+        <p>
+          Depending on your jurisdiction, you possess specific statutory rights regarding your personal information:
+        </p>
+        <ul>
+          <li><strong>Right to Access & Portability:</strong> You may request a machine-readable copy of the personal information we hold about you.</li>
+          <li><strong>Right to Rectification:</strong> You may update or correct inaccurate personal information via the app settings.</li>
+          <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> You may request permanent deletion of your account and related records.</li>
+          <li><strong>Right to Restrict or Object to Processing:</strong> You may object to certain data processing activities under legitimate circumstances.</li>
+          <li><strong>California Privacy Rights (CCPA / CPRA):</strong> We do <em>not</em> sell or share your personal information to third-party data brokers. You have the right not to receive discriminatory treatment for exercising your privacy rights.</li>
+        </ul>
+        <p>
+          To exercise any of these rights, contact us at <a href="mailto:privacy@aetheria.ai">privacy@aetheria.ai</a>. We respond to all verified requests within thirty (30) days.
+        </p>
+      </section>
+
+      <!-- Section 11 -->
+      <section id="sec-11" class="legal-section">
+        <h2><span class="sec-num">11.</span> Changes to This Privacy Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time to reflect modifications in our features, edge architecture, or evolving statutory legal requirements. When updates occur, the "Effective Date" at the top will be updated accordingly. In the event of material changes, we will provide prominent in-app notification before the changes take effect. Continued use of the Application following notice constitutes your acknowledgment and acceptance of the revised terms.
+        </p>
+      </section>
+
+      <!-- Section 12 -->
+      <section id="sec-12" class="legal-section">
+        <h2><span class="sec-num">12.</span> Contact Information & Data Protection Officer</h2>
+        <p>
+          If you have questions, feedback, or concerns regarding this Privacy Policy or our data protection practices, please contact our legal and privacy team:
+        </p>
+        
+        <div class="contact-card">
+          <h4>RoleMi Legal & Data Protection Office</h4>
+          <div class="contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>Privacy Inquiries: <a href="mailto:privacy@aetheria.ai">privacy@aetheria.ai</a></span>
+          </div>
+          <div class="contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <span>Customer Support: <a href="mailto:support@aetheria.ai">support@aetheria.ai</a></span>
+          </div>
+          <div class="contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Operating Entity: Aetheria AI / RoleMi, San Francisco, CA, USA</span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <span>•</span>
+        <a href="terms-of-service.html">Terms of Service</a>
+        <span>•</span>
+        <a href="https://api.aetheria.ai/delete-account" target="_blank" rel="noopener">Delete Account Portal</a>
+        <span>•</span>
+        <a href="mailto:support@aetheria.ai">Contact Support</a>
+      </div>
+      <div>
+        <p style="font-size: 0.8rem; color: #64748B; margin: 0;">
+          © 2026 RoleMi (Aetheria AI). All rights reserved. Package ID: com.aetheria.ai.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

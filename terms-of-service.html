@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — RoleMi AI</title>
+  <meta name="description" content="Official Terms of Service for RoleMi AI mobile application and Cloudflare edge services. Learn about acceptable use, virtual currency, AI disclaimers, and user agreements.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237C3AED' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z'/%3E%3Cpath d='M12 6a6 6 0 0 0-6 6c0 1.9 1 3.5 2.5 4.5l1.5-1.5'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --primary: #7C3AED;
+      --primary-dark: #6D28D9;
+      --primary-light: #F5F3FF;
+      --primary-ring: rgba(124, 58, 237, 0.15);
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-light: #64748B;
+      --bg-body: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --border-color: #E2E8F0;
+      --border-accent: #CBD5E1;
+      --success: #059669;
+      --success-bg: #ECFDF5;
+      --warning: #D97706;
+      --warning-bg: #FFFBEB;
+      --danger: #DC2626;
+      --danger-bg: #FEF2F2;
+      --info-bg: #EFF6FF;
+      --info-border: #93C5FD;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      color: var(--text-main);
+      background-color: var(--bg-body);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header Nav */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 8px rgba(124, 58, 237, 0.35);
+    }
+
+    .brand-name {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+      color: #0F172A;
+    }
+
+    .brand-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 0.2rem 0.5rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(124, 58, 237, 0.2);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.5rem 0.9rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      background: white;
+      color: var(--text-muted);
+      transition: all 0.15s ease;
+    }
+
+    .nav-link-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .nav-link-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .print-btn {
+      cursor: pointer;
+    }
+
+    /* Layout Wrapper */
+    .layout-wrapper {
+      max-width: 1200px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    /* Sidebar Table of Contents */
+    aside.toc-sidebar {
+      position: sticky;
+      top: 5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      max-height: calc(100vh - 6.5rem);
+      overflow-y: auto;
+    }
+
+    .toc-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-light);
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+    }
+
+    .toc-link {
+      display: block;
+      padding: 0.4rem 0.6rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      transition: all 0.15s ease;
+      line-height: 1.35;
+    }
+
+    .toc-link:hover {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 600;
+      padding-left: 0.85rem;
+    }
+
+    /* Main Content */
+    main.legal-document {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 3rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .doc-hero {
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .doc-hero h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #0F172A;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+    }
+
+    .meta-pill strong {
+      color: var(--text-main);
+    }
+
+    /* Typography & Sections */
+    section.legal-section {
+      margin-bottom: 3rem;
+      scroll-margin-top: 5rem;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #0F172A;
+      letter-spacing: -0.02em;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    h2 .sec-num {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 1.25rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1E293B;
+      margin-top: 1.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+      font-size: 0.96rem;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    ul, ol {
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    li strong {
+      color: var(--text-main);
+    }
+
+    /* Callout Boxes */
+    .callout {
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      border-left: 5px solid;
+    }
+
+    .callout-success {
+      background: var(--success-bg);
+      border-color: var(--success);
+      color: #064E3B;
+    }
+
+    .callout-warning {
+      background: var(--warning-bg);
+      border-color: var(--warning);
+      color: #78350F;
+    }
+
+    .callout-danger {
+      background: var(--danger-bg);
+      border-color: var(--danger);
+      color: #7F1D1D;
+    }
+
+    .callout-info {
+      background: var(--info-bg);
+      border-color: #3B82F6;
+      color: #1E3A8A;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .callout p {
+      color: inherit;
+      margin-bottom: 0.5rem;
+      font-size: 0.92rem;
+    }
+
+    .callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Contact Card */
+    .contact-card {
+      background: linear-gradient(135deg, #FAF5FF 0%, #F5F3FF 100%);
+      border: 1px solid rgba(124, 58, 237, 0.2);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-card h4 {
+      color: var(--primary-dark);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+
+    .contact-item a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: #0F172A;
+      color: #94A3B8;
+      padding: 3rem 1.5rem;
+      font-size: 0.88rem;
+      border-top: 1px solid #1E293B;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      color: #CBD5E1;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 900px) {
+      .layout-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      aside.toc-sidebar {
+        display: none;
+      }
+
+      main.legal-document {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .doc-hero h1 {
+        font-size: 1.75rem;
+      }
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      header.site-header, aside.toc-sidebar, footer.site-footer, .nav-actions {
+        display: none !important;
+      }
+
+      .layout-wrapper {
+        margin: 0;
+        padding: 0;
+        grid-template-columns: 1fr;
+      }
+
+      main.legal-document {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+
+      body {
+        background: white;
+        color: black;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">R</div>
+        <div>
+          <span class="brand-name">RoleMi</span>
+          <span class="brand-badge">Legal</span>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <a href="privacy-policy.html" class="nav-link-btn">Privacy Policy</a>
+        <a href="terms-of-service.html" class="nav-link-btn active">Terms of Service</a>
+        <button onclick="window.print()" class="nav-link-btn print-btn" title="Print or save as PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          Print
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="layout-wrapper">
+    
+    <!-- Table of Contents Sidebar -->
+    <aside class="toc-sidebar">
+      <div class="toc-title">
+        <span>Table of Contents</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+      </div>
+      <ul class="toc-list">
+        <li><a href="#sec-1" class="toc-link">1. Acceptance of Terms</a></li>
+        <li><a href="#sec-2" class="toc-link">2. Fictional Disclaimer & Safety</a></li>
+        <li><a href="#sec-3" class="toc-link">3. Eligibility & Age Restrictions</a></li>
+        <li><a href="#sec-4" class="toc-link">4. Service Description & Modes</a></li>
+        <li><a href="#sec-5" class="toc-link">5. Virtual Economy (Gems 💎)</a></li>
+        <li><a href="#sec-6" class="toc-link">6. Acceptable Use & Conduct</a></li>
+        <li><a href="#sec-7" class="toc-link">7. Intellectual Property & UGC</a></li>
+        <li><a href="#sec-8" class="toc-link">8. Account Termination</a></li>
+        <li><a href="#sec-9" class="toc-link">9. Disclaimer of Warranties</a></li>
+        <li><a href="#sec-10" class="toc-link">10. Limitation of Liability</a></li>
+        <li><a href="#sec-11" class="toc-link">11. Arbitration & Governing Law</a></li>
+        <li><a href="#sec-12" class="toc-link">12. Contact Information</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Legal Document -->
+    <main class="legal-document">
+      
+      <div class="doc-hero">
+        <h1>Terms of Service</h1>
+        <p style="font-size: 1.05rem; color: var(--text-main); font-weight: 500;">
+          Legal Agreement and User Terms for <strong>RoleMi</strong> mobile application and Cloudflare edge services.
+        </p>
+        <div class="meta-pills">
+          <div class="meta-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span><strong>Effective Date:</strong> November 1, 2026</span>
+          </div>
+          <div class="meta-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span><strong>Application ID:</strong> com.aetheria.ai</span>
+          </div>
+          <div class="meta-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+            <span><strong>Fictional AI Simulation:</strong> Entertainment Only</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="sec-1" class="legal-section">
+        <h2><span class="sec-num">1.</span> Acceptance of Terms</h2>
+        <p>
+          Please read these Terms of Service ("Terms") carefully. By downloading, accessing, browsing, registering for, or using the <strong>RoleMi</strong> mobile application (package ID <code>com.aetheria.ai</code>), associated websites, or backend cloud APIs (collectively, "RoleMi", "the Application", "we", "us", or "our"), you agree to be bound by these Terms and our <a href="privacy-policy.html">Privacy Policy</a>.
+        </p>
+        <p>
+          If you do not agree to each and every provision set forth in these Terms, do not install, access, or use the Application.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="sec-2" class="legal-section">
+        <h2><span class="sec-num">2.</span> Fictional AI Disclaimer & Emergency Safety Notice</h2>
+        
+        <div class="callout callout-danger">
+          <div class="callout-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            CRITICAL DISCLAIMER: PURELY FICTIONAL ENTERTAINMENT
+          </div>
+          <p>
+            <strong>ROLEMI AND ALL CHARACTERS, PERSONAS, NARRATIVES, AND DIALOGUES ENCOUNTERED IN THE APPLICATION ARE ENTIRELY FICTIONAL ARTIFICIAL INTELLIGENCE SIMULATIONS DESIGNED SOLELY FOR CREATIVE ENTERTAINMENT PURPOSES.</strong>
+          </p>
+          <p>
+            Characters are not living persons, licensed therapists, psychiatric counselors, physicians, attorneys, or certified financial advisors.
+          </p>
+        </div>
+
+        <h3>A. No Professional or Medical Advice</h3>
+        <p>
+          Nothing generated by AI characters or presented in the Application should ever be construed as professional medical, psychiatric, psychological, clinical, legal, accounting, tax, or investment advice. Always consult a qualified, licensed human healthcare provider or financial professional regarding any real-world health or legal condition.
+        </p>
+
+        <h3>B. Emergency & Mental Health Crisis Protocol</h3>
+        <p>
+          <strong>Never use RoleMi if you are experiencing suicidal thoughts, clinical depression, severe emotional trauma, or a life-threatening medical emergency.</strong> The Application is incapable of providing crisis intervention. If you or someone you know is in immediate crisis, please immediately contact emergency services or dedicated national hotlines:
+        </p>
+        <ul>
+          <li><strong>United States & Canada:</strong> Dial or text <code>988</code> (Suicide & Crisis Lifeline) or call <code>911</code>.</li>
+          <li><strong>United Kingdom:</strong> Dial <code>111</code> (NHS Mental Health Services) or call <code>999</code> / text <code>SHOUT to 85258</code>.</li>
+          <li><strong>European Union:</strong> Dial <code>112</code> for general emergencies or local mental health helplines.</li>
+          <li><strong>International:</strong> Visit <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a> to reach support resources in your country.</li>
+        </ul>
+
+        <h3>C. AI Inaccuracies & Hallucinations</h3>
+        <p>
+          Artificial intelligence models are inherently probabilistic and may produce historically false, contradictory, illogical, or factually inaccurate statements ("hallucinations"). RoleMi makes no representations, guarantees, or warranties regarding the factual reliability, precision, or completeness of character outputs.
+        </p>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="sec-3" class="legal-section">
+        <h2><span class="sec-num">3.</span> Eligibility & Age Restrictions</h2>
+        <p>
+          You must be at least <strong>13 years of age</strong> (or 16 years of age in the European Economic Area / United Kingdom) to create an account or use RoleMi.
+        </p>
+        <p>
+          By creating an account or accessing the Application, you represent and warrant that you satisfy the required minimum age and possess the legal capacity to enter into these Terms. If you are between 13 and the legal age of majority in your jurisdiction, you confirm that your parent or legal guardian has reviewed and consented to these Terms on your behalf.
+        </p>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="sec-4" class="legal-section">
+        <h2><span class="sec-num">4.</span> Description of the Service & Conversational Modes</h2>
+        <p>
+          RoleMi provides an unscripted interactive storytelling environment powered by Cloudflare edge workers and enterprise LLM inference engines. Features include:
+        </p>
+        <ul>
+          <li><strong>Conversational Chat Modes:</strong> Seamlessly switch between Casual Mode (concise banter), Companion Mode (empathetic, emotionally resonant conversations), and Immersive Mode (cinematic descriptive roleplay).</li>
+          <li><strong>Contextual Continuous Memory:</strong> Fictional storyline facts and user preferences are automatically synthesized and persisted to provide continuity across multi-turn sessions.</li>
+          <li><strong>Character Studio:</strong> Create and publish personalized custom characters complete with distinct persona directives, greetings, and visual avatars.</li>
+        </ul>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="sec-5" class="legal-section">
+        <h2><span class="sec-num">5.</span> Virtual Currency (Gems 💎) & In-App Purchases</h2>
+        <p>
+          The Application utilizes a virtual token system known as <strong>Gems (💎)</strong> to unlock AI conversational turns, extended context memory, and character creation tools.
+        </p>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            Terms Governing Virtual Currency
+          </div>
+          <p>
+            1. <strong>Limited Virtual License:</strong> Gems are purely virtual entertainment license tokens. Gems have zero real-world monetary value, do not accrue interest, do not constitute tangible personal property, and cannot be redeemed, exchanged, or converted into fiat currency or real-world assets.
+          </p>
+          <p>
+            2. <strong>Non-Transferable:</strong> Gems are strictly tied to your authenticated user account. You may not sell, barter, trade, gift, or transfer Gems to another user or third party.
+          </p>
+          <p>
+            3. <strong>Purchases & Refunds:</strong> In-App Purchases of Gems packages are processed securely by <strong>Google Play In-App Billing</strong>. All sales are final and non-refundable, except as expressly required by applicable statutory consumer laws or Google Play standard refund policies.
+          </p>
+        </div>
+
+        <h3>Atomic Fair-Billing Guarantee</h3>
+        <p>
+          We respect our community. Our authoritative Cloudflare edge ledger uses atomic conditional reservations. If an AI inference request fails due to server network timeouts or provider interruption, <strong>the reserved Gems are immediately returned to your available balance at zero cost</strong>.
+        </p>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="sec-6" class="legal-section">
+        <h2><span class="sec-num">6.</span> Acceptable Use Policy & Content Restrictions</h2>
+        <p>
+          You agree to utilize RoleMi ethically, lawfully, and in harmony with our community safety standards. You agree NOT to generate, upload, transmit, or solicit:
+        </p>
+        <ul>
+          <li><strong>Child Sexual Abuse & Exploitation (CSAM):</strong> Any imagery, dialogue, or depiction that sexualizes, exploits, or endangers minors. Any infraction results in immediate permanent account termination and mandatory reporting to the National Center for Missing & Exploited Children (NCMEC) and relevant law enforcement.</li>
+          <li><strong>Real-World Violence & Harm:</strong> Content promoting suicide, self-mutilation, terrorism, weapons production, cyberattacks, or violent physical attacks against real persons.</li>
+          <li><strong>Hate Speech & Harassment:</strong> Severe bullying, defamation, stalking, or slurs targeting individuals based on race, ethnicity, religion, disability, gender, or sexual orientation.</li>
+          <li><strong>Malicious Exploits & Reverse Engineering:</strong> Attempting prompt injection attacks ("jailbreaks"), decompiling APK or AAB binaries, automating bots against our API endpoints, or bypassing virtual currency controls.</li>
+          <li><strong>Impersonation:</strong> Creating characters that simulate living public figures or private individuals without their explicit written authorization.</li>
+        </ul>
+      </section>
+
+      <!-- Section 7 -->
+      <section id="sec-7" class="legal-section">
+        <h2><span class="sec-num">7.</span> Intellectual Property & User-Generated Content</h2>
+        
+        <h3>A. User-Generated Characters & Content</h3>
+        <p>
+          You retain copyright and ownership of the original text backstories, prompts, and storylines you author. By transmitting content through the Application, you grant RoleMi a worldwide, non-exclusive, royalty-free license to host, cache, store, and process your inputs solely for the technical execution of the service.
+        </p>
+
+        <h3>B. RoleMi Platform Intellectual Property</h3>
+        <p>
+          All proprietary application software, interface graphics, animations, branding, trademarks, audio, backend algorithms, and canonical character personas (including Adrian Vale, Selene Ardent, Elara Voss, Damien Cross, Mira Solenne, Rowan Ashford) are the exclusive intellectual property of RoleMi and its licensors.
+        </p>
+      </section>
+
+      <!-- Section 8 -->
+      <section id="sec-8" class="legal-section">
+        <h2><span class="sec-num">8.</span> Account Suspension & Termination</h2>
+        <p>
+          We reserve the right to temporarily suspend or permanently terminate your access to the Application, without prior notice or liability, in the event that:
+        </p>
+        <ul>
+          <li>You materially violate any provision of these Terms or community guidelines.</li>
+          <li>Fraudulent payment chargebacks or virtual currency manipulation is detected.</li>
+          <li>We are mandated to take action by competent legal, judicial, or law enforcement authorities.</li>
+        </ul>
+        <p>
+          You may terminate your account at any time using the in-app <strong>Profile &rarr; Settings &rarr; Account Delete</strong> option or via our external deletion portal at <a href="https://api.aetheria.ai/delete-account" target="_blank" rel="noopener">https://api.aetheria.ai/delete-account</a>.
+        </p>
+      </section>
+
+      <!-- Section 9 -->
+      <section id="sec-9" class="legal-section">
+        <h2><span class="sec-num">9.</span> Disclaimer of Warranties</h2>
+        <p style="text-transform: uppercase; font-size: 0.92rem; font-weight: 600;">
+          THE APPLICATION, ASSOCIATED BACKEND APIS, AND AI GENERATIVE OUTPUTS ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, ACCURACY, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, BUG-FREE, SECURE, OR ACCURATE AT ALL TIMES.
+        </p>
+      </section>
+
+      <!-- Section 10 -->
+      <section id="sec-10" class="legal-section">
+        <h2><span class="sec-num">10.</span> Limitation of Liability</h2>
+        <p style="text-transform: uppercase; font-size: 0.92rem; font-weight: 600;">
+          TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL ROLEMI, ITS AFFILIATES, DIRECTORS, EMPLOYEES, AGENTS, OR SUPPLIERS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES (INCLUDING LOSS OF PROFITS, DATA LOSS, DEVICE CORRUPTION, OR EMOTIONAL DISTRESS) ARISING OUT OF OR IN CONNECTION WITH YOUR USE OR INABILITY TO USE THE APPLICATION.
+        </p>
+        <p>
+          IN NO EVENT SHALL OUR TOTAL AGGREGATE LIABILITY EXCEED THE TOTAL AMOUNT ACTUALLY PAID BY YOU TO ROLEMI THROUGH GOOGLE PLAY IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR FIFTY UNITED STATES DOLLARS ($50.00 USD), WHICHEVER IS GREATER.
+        </p>
+      </section>
+
+      <!-- Section 11 -->
+      <section id="sec-11" class="legal-section">
+        <h2><span class="sec-num">11.</span> Mandatory Arbitration & Governing Law</h2>
+        <p>
+          These Terms and any dispute arising from them shall be governed by and construed under the laws of the State of California, United States, without regard to conflict of law principles.
+        </p>
+        <p>
+          Any dispute, controversy, or claim arising out of or relating to these Terms or the breach thereof shall be resolved exclusively through final and binding individual arbitration administered by the American Arbitration Association (AAA) under its Consumer Arbitration Rules. You expressly waive any right to initiate, join, or participate as a plaintiff or class member in any class action, collective arbitration, or representative proceeding.
+        </p>
+      </section>
+
+      <!-- Section 12 -->
+      <section id="sec-12" class="legal-section">
+        <h2><span class="sec-num">12.</span> Contact Information</h2>
+        <p>
+          If you have questions, feedback, or legal inquiries concerning these Terms of Service, please reach out to our team:
+        </p>
+        
+        <div class="contact-card">
+          <h4>RoleMi Legal Affairs</h4>
+          <div class="contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>Legal Inquiries: <a href="mailto:privacy@aetheria.ai">privacy@aetheria.ai</a></span>
+          </div>
+          <div class="contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <span>Customer Support: <a href="mailto:support@aetheria.ai">support@aetheria.ai</a></span>
+          </div>
+          <div class="contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Operating Entity: Aetheria AI / RoleMi, San Francisco, CA, USA</span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <span>•</span>
+        <a href="terms-of-service.html">Terms of Service</a>
+        <span>•</span>
+        <a href="https://api.aetheria.ai/delete-account" target="_blank" rel="noopener">Delete Account Portal</a>
+        <span>•</span>
+        <a href="mailto:support@aetheria.ai">Contact Support</a>
+      </div>
+      <div>
+        <p style="font-size: 0.8rem; color: #64748B; margin: 0;">
+          © 2026 RoleMi (Aetheria AI). All rights reserved. Package ID: com.aetheria.ai.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
